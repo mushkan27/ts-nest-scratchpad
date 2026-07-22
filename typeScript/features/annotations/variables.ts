@@ -35,3 +35,21 @@ let log: (i: number) => void = (i: number) => {
 let json = '{"x": 10, "y": 20}';
 let coordinates: {x: number, y: number} = JSON.parse(json);
 console.log(coordinates);
+
+//2. when we declare a variable on one line and initialize it later
+let color = ["red", "blue", "green"];
+let foundColor: boolean;
+for (let i = 0; i < color.length; i++) {
+    if (color[i] === "red") {
+        foundColor = true;
+    }
+}
+
+//3. variable whose type cannot be inferred correctly
+let number = [-10, -1, 12];
+let numberAboveZero: boolean | number = false;
+for (let i = 0; i < number.length; i++) {
+    if (number[i] > 0) {
+        numberAboveZero = number[i];
+    }
+}
