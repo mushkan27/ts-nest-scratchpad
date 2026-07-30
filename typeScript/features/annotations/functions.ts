@@ -23,12 +23,16 @@ const todaysWeather = {
     weather: "sunny"
 }
 
-const logWeather = (forecast: { date: Date, weather: string }): void => {
+interface WeatherAndDate {
+ date: Date, weather: string
+}
+
+const logWeather = (forecast:WeatherAndDate): void => {
     console.log(forecast.date);
     console.log(forecast.weather);
 }
 
-const destructuredLogWeather = ({ date, weather }: { date: Date, weather: string }): void => {
+const destructuredLogWeather = ({ date, weather }:WeatherAndDate): void => {
     console.log(date);
     console.log(weather);
 }

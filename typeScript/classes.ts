@@ -18,3 +18,16 @@ class Car extends Vehicle {
 const car = new Car()
 car.startDriving()
 car.honk()
+
+//constructor
+class Person {
+    // name: string = "muskan"
+    // constructor(name:string){
+    //     this.name = name
+    // }
+
+     constructor(public name:string){}
+}
+
+const person = new Person('ruru')
+console.log(person.name)
